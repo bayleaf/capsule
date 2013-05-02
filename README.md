@@ -12,7 +12,7 @@ Only `database` for now, more to come.
 
 Before you can make any `Capsule\DB` calls or use any Eloquent Models, you must first make a connection using the `Capsule\Database\Connection::make` method.
 
-    Capsule\Database\Connection::make('main', [
+    Capsule\Database\Connection::make('main', array(
         'driver'    => 'mysql',
         'host'      => 'localhost',
         'database'  => '',
@@ -21,7 +21,7 @@ Before you can make any `Capsule\DB` calls or use any Eloquent Models, you must 
         'collation' => 'utf8_general_ci',
         'prefix'    => '',
         'charset'    => 'utf8'
-    ], true);
+    ), true);
 
 The `make` method has the following prototype:
 
@@ -33,7 +33,7 @@ You can use the Query Builder just as you would using the `Db` Facade in Laravel
 
     Capsule\DB::table('foo')->select('*')->get()
 
-**Note: You can `use DbWrapper` in your PHP files so you can simply use `Db` without the namespace.**
+**Note: You can `use Capsule\DB;` in your PHP files so you can simply use `DB::table('foo')->select('*')->get()` without the namespace.**
 
 ### Eloquent Models
 
