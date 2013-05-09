@@ -13,6 +13,9 @@
         "illuminate/database": "4.0.*",
         "illuminate/container": "4.0.*"
     },
+    "replace": {
+        "dhorrigan/capsule": "self.version"
+    },
     "autoload": {
         "psr-0": {
             "Capsule": "lib/"
